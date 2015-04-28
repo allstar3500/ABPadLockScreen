@@ -74,6 +74,10 @@
     lockScreen.modalPresentationStyle = UIModalPresentationFullScreen;
     lockScreen.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 	
+    [lockScreen setAllowedAttempts:NSIntegerMax];
+    [lockScreen setSingleAttemptLeftText:@""];
+    [lockScreen setPluralAttemptsLeftText:@""];
+    
 //	Example using an image
 //	UIImageView* backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wallpaper"]];
 //	backgroundView.contentMode = UIViewContentModeScaleAspectFill;

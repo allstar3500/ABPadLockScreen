@@ -114,12 +114,12 @@
     [lockScreenView resetAnimated:YES];
 	[lockScreenView animateFailureNotification];
     
-    if (self.remainingAttempts > 1)
+    if (self.remainingAttempts > 1 && self.pluralAttemptsLeftString.length > 0)
     {
         [lockScreenView updateDetailLabelWithString:[NSString stringWithFormat:@"%ld %@", (long)self.remainingAttempts, self.pluralAttemptsLeftString]
                                            animated:YES completion:nil];
     }
-    else if (self.remainingAttempts == 1)
+    else if (self.remainingAttempts == 1 && self.singleAttemptLeftString.length > 0)
     {
         [lockScreenView updateDetailLabelWithString:[NSString stringWithFormat:@"%ld %@", (long)self.remainingAttempts, self.singleAttemptLeftString]
                                            animated:YES completion:nil];
